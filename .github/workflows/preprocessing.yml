@@ -7,7 +7,10 @@ on:
     paths:
       - 'preprocessing/automate_Michael.py'
       - 'social_media_mental_health.csv'
-  workflow_dispatch:   # bisa trigger manual dari tab Actions
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   preprocessing:
@@ -22,22 +25,30 @@ jobs:
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12.7"
+          python-version: "3.12"
 
-      # ── STEP 3: Install dependencies ──
+      # ── STEP 3: Cek struktur file (debug) ──
+      - name: Show Repository Structure
+        run: |
+          echo "=== Root files ==="
+          ls -la
+          echo "=== preprocessing/ folder ==="
+          ls -la preprocessing/ || echo "Folder preprocessing/ tidak ditemukan!"
+
+      # ── STEP 4: Install dependencies ──
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pandas==2.2.2 numpy==1.26.4 scikit-learn==1.5.1
 
-      # ── STEP 4: Jalankan script preprocessing otomatis ──
+      # ── STEP 5: Jalankan script preprocessing ──
       - name: Run Automated Preprocessing
         run: |
           python preprocessing/automate_Michael.py \
             --input social_media_mental_health.csv \
             --output preprocessing/social_media_mental_health_preprocessing
 
-      # ── STEP 5: Commit hasil preprocessing ke repo ──
+      # ── STEP 6: Commit hasil preprocessing ke repo ──
       - name: Commit Preprocessed Dataset to Repository
         run: |
           git config --global user.name  "github-actions[bot]"
