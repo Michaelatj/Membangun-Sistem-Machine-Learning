@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/along/OneDrive/Desktop/Membangun-Sistem-Machine-Learning/Membangun_model/mlruns/874368299081608905/59d29204f0bc47e5841ee221a1bbb7a4/artifacts
+end_time: 1779083922590
+entry_point_name: ''
+experiment_id: '874368299081608905'
+lifecycle_stage: active
+run_id: 59d29204f0bc47e5841ee221a1bbb7a4
+run_name: RandomForest_Baseline
+run_uuid: 59d29204f0bc47e5841ee221a1bbb7a4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779083913085
+status: 3
+tags: []
+user_id: along

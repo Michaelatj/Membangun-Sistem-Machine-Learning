@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/along/OneDrive/Desktop/Membangun-Sistem-Machine-Learning/Membangun_model/mlruns/874368299081608905/32a63c51b13d4d0b83801ea506ee5acf/artifacts
+end_time: 1779083995053
+entry_point_name: ''
+experiment_id: '874368299081608905'
+lifecycle_stage: active
+run_id: 32a63c51b13d4d0b83801ea506ee5acf
+run_name: RandomForest_Tuning_ManualLog
+run_uuid: 32a63c51b13d4d0b83801ea506ee5acf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779083989006
+status: 3
+tags: []
+user_id: along

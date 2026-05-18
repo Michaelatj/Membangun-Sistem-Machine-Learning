@@ -1,0 +1,15 @@
+digest: 83e14dd6
+name: dataset
+profile: '{"num_rows": 1599, "num_elements": 17589}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "Age", "required": true},
+  {"type": "long", "name": "Gender", "required": true}, {"type": "long", "name": "User_Archetype",
+  "required": true}, {"type": "long", "name": "Primary_Platform", "required": true},
+  {"type": "double", "name": "Daily_Screen_Time_Hours", "required": true}, {"type":
+  "long", "name": "Dominant_Content_Type", "required": true}, {"type": "long", "name":
+  "Activity_Type", "required": true}, {"type": "long", "name": "Late_Night_Usage",
+  "required": true}, {"type": "long", "name": "Social_Comparison_Trigger", "required":
+  true}, {"type": "double", "name": "Sleep_Duration_Hours", "required": true}, {"type":
+  "long", "name": "GAD_7_Severity", "required": true}]}'
+source: '{"tags": {"mlflow.user": "along", "mlflow.source.name": "modelling.py", "mlflow.source.type":
+  "LOCAL"}}'
+source_type: code
