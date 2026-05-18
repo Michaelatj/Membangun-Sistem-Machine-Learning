@@ -48,19 +48,19 @@ jobs:
             --input social_media_mental_health.csv \
             --output preprocessing/social_media_mental_health_preprocessing
 
-      # ── STEP 6: Commit hasil preprocessing ke repo ──
-    - name: Commit preprocessed dataset to repository
-      run: |
-        git config --global user.name  "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add preprocessing/social_media_mental_health_preprocessing/
-        
-        # Hanya commit jika ada perubahan file
-        git diff --cached --quiet || git commit -m "ci: update preprocessed dataset [run #5]"
-        
-        # TARUH PERBAIKAN DI SINI: Pull dengan rebase untuk menggabungkan commit terbaru dari GitHub
-        git pull --rebase origin main
-        
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # ── STEP 6: Commit hasil preprocessing ke repo (SUDAH DIPERBAIKI) ──
+      - name: Commit preprocessed dataset to repository
+        run: |
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add preprocessing/social_media_mental_health_preprocessing/
+          
+          # Hanya commit jika ada perubahan file
+          git diff --cached --quiet || git commit -m "ci: update preprocessed dataset [run #5]"
+          
+          # Pull dengan rebase untuk menggabungkan commit terbaru dari GitHub
+          git pull --rebase origin main
+          
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
